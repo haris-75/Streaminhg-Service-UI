@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MovieList from './MovieList/MovieList';
+import Data from './data.json';
+import HeroBanner from './HeroBanner/HeroBanner';
+import AppNavbar from './AppNavbar/AppNavbar';
+import Footer from './Footer/Footer';
 
 function App() {
+  const layoutArray = Data?.titles?.filter(
+    ({ moduleType }) => moduleType === 'LAYOUT'
+  );
+  const heroArray = Data?.titles?.filter(
+    ({ moduleType }) => moduleType === 'HERO'
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <AppNavbar></AppNavbar>
+      {heroArray?.map(({ title, layoutTitles, moduleId }) => (
+        <HeroBanner
+          title={title}
+          list={layoutTitles?.titles}
+          key={moduleId}
+        ></HeroBanner>
+      ))}
+      {layoutArray?.map(({ title, layoutTitles, moduleId }) => (
+        <MovieList
+          title={title}
+          list={layoutTitles?.titles}
+          key={moduleId}
+        ></MovieList>
+      ))}
+      <Footer></Footer>
     </div>
   );
 }

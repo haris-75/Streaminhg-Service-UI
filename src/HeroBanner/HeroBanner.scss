@@ -1,0 +1,40 @@
+.hero-banner-action-button-container {
+  display: none;
+  .hero-banner-action-button {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 100;
+  }
+  .hero-banner-action-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .banner-left-btn {
+    span {
+      svg {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+  .banner-right-btn {
+    right: 0;
+  }
+}
+.react-stacked-center-carousel-slide--1 {
+  left: calc(0% - 415px) !important;
+  opacity: 0.4 !important;
+  transform: scale(1) !important;
+}
+.react-stacked-center-carousel-slide-1 {
+  left: calc(100% - 335px) !important;
+  opacity: 0.4 !important;
+  transform: scale(1) !important;
+}
+
+.stacked-container-wrapper:hover {
+  .hero-banner-action-button-container {
+    display: block;
+  }
+}
