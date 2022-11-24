@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { ReactComponent as Logo } from '../assets/logo.svg';
+import Logo from '../assets/app-logo.png';
 import './AppNavbar.scss';
 
 function AppNavbar() {
@@ -28,7 +28,12 @@ function AppNavbar() {
     >
       <Container>
         <Navbar.Brand href='#home'>
-          <Logo width={200} fill='white'></Logo>
+          <img
+            style={{ backgroundColor: '#f5f5f5' }}
+            width={200}
+            src={Logo}
+            alt='logo'
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>

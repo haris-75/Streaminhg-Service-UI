@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className='app-footer'>
       <div className='footer-links'>
-        <span className='link-text'> Why STARZPLAY?</span>
+        <span className='link-text'> Why LIGHT STUDIO?</span>
         <span className='footer-link-separator'>|</span>
         <span className='link-text'> Help Center</span>
         <span className='footer-link-separator'>|</span>
@@ -19,7 +19,8 @@ function Footer() {
         <span className='link-text'> Privacy Policy</span>
       </div>
       <div className='footer-copyright-text'>
-        Copyright © 2022 STARZ PLAY by Cinepax. All rights reserved.
+        Copyright © {new Date().getFullYear()} Light Studio. All rights
+        reserved.
       </div>
       <div className='footer-social-links'>
         <div className='social-media-links'>
