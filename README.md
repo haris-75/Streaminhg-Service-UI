@@ -10,7 +10,7 @@ In the project home directory, you can run:
 
 ### `./scripts/run.sh`
 
-This script install the dependencies and runs the app in the development mode.\
+This script install the dependencies and runs the app in the development mode.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
