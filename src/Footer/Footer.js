@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.scss';
-import { Facebook, Instagram, Twitter, YouTube } from '@material-ui/icons';
 
 function Footer() {
   return (
@@ -24,10 +23,10 @@ function Footer() {
       </div>
       <div className='footer-social-links'>
         <div className='social-media-links'>
-          <Facebook fontSize='large' />
+          {/* <Facebook fontSize='large' />
           <Instagram fontSize='large' />
           <Twitter fontSize='large' />
-          <YouTube fontSize='large' />
+          <YouTube fontSize='large' /> */}
         </div>
         <div className='social-app-links'>
           <img

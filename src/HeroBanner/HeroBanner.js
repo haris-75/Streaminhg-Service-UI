@@ -3,9 +3,6 @@ import {
   StackedCarousel,
   ResponsiveContainer,
 } from 'react-stacked-center-carousel';
-import Fab from '@material-ui/core/Fab';
-import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
 import './HeroBanner.scss';
 
 export default function HeroBanner({ list }) {
@@ -74,24 +71,20 @@ export default function HeroBanner({ list }) {
         }}
       />
       <div className='hero-banner-action-button-container'>
-        <Fab
-          className='hero-banner-action-button banner-left-btn'
-          size='small'
+        <button
           onClick={() => {
             ref.current?.goBack();
           }}
         >
-          <ArrowBackIos />
-        </Fab>
-        <Fab
-          className='hero-banner-action-button banner-right-btn'
-          size='small'
+          ArrowBack
+        </button>
+        <button
           onClick={() => {
             ref.current?.goNext(6);
           }}
         >
-          <ArrowForwardIos />
-        </Fab>
+          ArrowForward
+        </button>
       </div>
     </div>
   );
