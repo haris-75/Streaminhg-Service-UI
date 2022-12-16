@@ -53,9 +53,9 @@ export default function HeroBanner({ list }) {
       <ResponsiveContainer
         carouselRef={ref}
         render={(parentWidth, carouselRef) => {
-          let currentVisibleSlide = 5;
-          if (parentWidth <= 1440) currentVisibleSlide = 3;
-          if (parentWidth <= 1080) currentVisibleSlide = 1;
+          let currentVisibleSlide = 1;
+          if (parentWidth <= 1440 && parentWidth > 949) currentVisibleSlide = 3;
+          if (parentWidth <= 949) currentVisibleSlide = 1;
           return (
             <StackedCarousel
               ref={carouselRef}
@@ -64,8 +64,7 @@ export default function HeroBanner({ list }) {
               carouselWidth={parentWidth}
               data={data}
               currentVisibleSlide={currentVisibleSlide}
-              maxVisibleSlide={5}
-              useGrabCursor
+              maxVisibleSlide={3}
             />
           );
         }}
@@ -75,15 +74,17 @@ export default function HeroBanner({ list }) {
           onClick={() => {
             ref.current?.goBack();
           }}
+          className='fas custom-arrow-btn'
         >
-          ArrowBack
+          &#xf104;
         </button>
         <button
           onClick={() => {
             ref.current?.goNext(6);
           }}
+          className='fas custom-arrow-btn'
         >
-          ArrowForward
+          &#xf105;
         </button>
       </div>
     </div>
@@ -96,9 +97,9 @@ export const Card = React.memo(function (props) {
   return (
     <div
       style={{
+        userSelect: 'none',
         width: '100%',
         height: 300,
-        userSelect: 'none',
       }}
       className='my-slide-component'
     >

@@ -1,5 +1,9 @@
 .hero-banner-action-button-container {
   display: none;
+  position: absolute;
+  top: 45%;
+  width: 100vw;
+  justify-content: space-between;
   .hero-banner-action-button {
     position: absolute;
     top: 40%;
@@ -23,18 +27,40 @@
   }
 }
 .react-stacked-center-carousel-slide--1 {
-  left: calc(0% - 415px) !important;
+  // left: calc(0% - 415px) !important;
   opacity: 0.4 !important;
-  transform: scale(1) !important;
+  // transform: scale(1) !important;
+}
+.react-stacked-center-carousel-slide-0 {
+  // div img {
+  //   width: 80vw;
+  //   background: #fff;
+  // // }
+  // width: 80vw !important;
+  // left: calc(7% + 30px) !important;
 }
 .react-stacked-center-carousel-slide-1 {
-  left: calc(100% - 335px) !important;
+  // left: calc(100% - 335px) !important;
   opacity: 0.4 !important;
-  transform: scale(1) !important;
+  // transform: scale(1) !important;
 }
 
 .stacked-container-wrapper:hover {
   .hero-banner-action-button-container {
-    display: block;
+    display: flex;
+    z-index: 100;
   }
 }
+.custom-arrow-btn {
+  background: #0000006e;
+  border: none;
+  font-size: 29px;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px 15px;
+  margin-inline: 5px;
+}
+// .custom-stacked-carousel {
+//   width: 100vw !important;
+//   height: 65vh !important;
+// }
